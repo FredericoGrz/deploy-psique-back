@@ -1,0 +1,41 @@
+{
+  "name": "psique-back",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "pm2-runtime start ecosystem.config.js --env production",
+    "dev": "nodemon",
+    "migrate": "ts-node ./node_modules/knex/bin/cli.js migrate:latest",
+    "migrate:rollback": "ts-node ./node_modules/knex/bin/cli.js migrate:rollback",
+    "migrate-and-start": "npm run migrate && npm run start"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "express-async-errors": "^3.1.1",
+    "firebase-admin": "^13.0.1",
+    "jsonwebtoken": "^9.0.2",
+    "knex": "^3.1.0",
+    "pg": "^8.12.0",
+    "pm2": "^5.4.2",
+    "psique-back": "file:"
+  },
+  "devDependencies": {
+    "@types/bcryptjs": "^2.4.6",
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.21",
+    "@types/jsonwebtoken": "^9.0.6",
+    "@types/knex": "^0.16.1",
+    "@types/node": "^20.14.10",
+    "dotenv": "^16.4.7",
+    "nodemon": "^3.1.4",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.5.3"
+  }
+}

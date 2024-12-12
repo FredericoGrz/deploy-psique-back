@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "resolveJsonModule": true,
+    "target": "ESNext",
+    "module": "commonjs",
+    "rootDir": "./src",
+    "outDir": "./dist",
+    "typeRoots": [
+      "./src/types",
+      "./node_modules/@types"
+    ],
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true
+  },
+  "include": [
+    "src/**/*",
+    "src/configs/firebase-key.json"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}
